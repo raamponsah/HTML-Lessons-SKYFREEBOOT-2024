@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML Form Example</title>
+</head>
+<body>
+
+<h2>Contact Form</h2>
+
+<form action="/submit" method="post">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name"><br><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email"><br><br>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password"><br><br>
+
+    <label for="gender">Gender:</label><br>
+    <input type="radio" id="gender-male" name="gender" value="male">
+    <label for="gender-male">Male</label><br>
+    <input type="radio" id="gender-female" name="gender-2" value="female">
+    <label for="gender-female">Female</label><br><br>
+
+    <label for="hobbies">Hobbies:</label><br>
+    <input type="checkbox" id="hobbies-reading" name="hobbies" value="reading">
+    <label for="hobbies-reading">Reading</label><br>
+    <input type="checkbox" id="hobbies-traveling" name="hobbies" value="traveling">
+    <label for="hobbies-traveling">Traveling</label><br><br>
+
+    <label for="country">Country:</label>
+    <select id="country" name="country">
+        <option value="usa">USA</option>
+        <option value="canada">Canada</option>
+        <option value="uk">UK</option>
+    </select><br><br>
+
+    <label for="message">Message:</label><br>
+    <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
+
+    <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>

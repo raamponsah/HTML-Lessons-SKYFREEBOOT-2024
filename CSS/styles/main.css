@@ -1,0 +1,21 @@
+body{
+    background-color: bisque;
+    width: 1000px;
+    margin: 20px auto;
+}
+
+p{
+    background-color: rgb(164, 120, 67);
+    font-size: 30px;
+    padding: 10px;
+    width: 400px;
+    border:5px solid yellow;
+    margin-top:20px;
+    margin-bottom:20px;
+    margin-right:20px;
+    margin-left:20px;
+
+   
+
+
+}
