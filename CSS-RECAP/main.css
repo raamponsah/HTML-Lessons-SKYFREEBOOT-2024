@@ -1,0 +1,20 @@
+body{
+    background-color: lightblue;
+    text-align: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+h1:nth-child(odd){
+    color:blueviolet; font-size: 100px;
+}
+
+h1{
+    font-size: 40px;
+    color: darkmagenta;
+}
+
+p{
+    font-size: 20px;
+    color: darkgreen;
+}
