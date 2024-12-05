@@ -1,46 +1,95 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>HTML Form Example</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
 
-<h2>Contact Form</h2>
+    <div class="bg-white shadow-md rounded-lg p-8 max-w-lg w-full">
+        <h2 class="text-2xl font-bold mb-6 text-gray-800">Contact Form</h2>
+        
+        <form action="/submit" method="post" class="space-y-4">
+            <!-- Name -->
+            <div>
+                <label for="name" class="block text-gray-700 font-medium">Name</label>
+                <input type="text" id="name" name="name" 
+                       class="mt-1 w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none">
+            </div>
 
-<form action="/submit" method="post">
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name"><br><br>
+            <!-- Email -->
+            <div>
+                <label for="email" class="block text-gray-700 font-medium">Email</label>
+                <input type="email" id="email" name="email" 
+                       class="mt-1 w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none">
+            </div>
 
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email"><br><br>
+            <!-- Password -->
+            <div>
+                <label for="password" class="block text-gray-700 font-medium">Password</label>
+                <input type="password" id="password" name="password" 
+                       class="mt-1 w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none">
+            </div>
 
-    <label for="password">Password:</label>
-    <input type="password" id="password" name="password"><br><br>
+            <!-- Gender -->
+            <div>
+                <label class="block text-gray-700 font-medium">Gender</label>
+                <div class="flex items-center space-x-4 mt-1">
+                    <label class="flex items-center">
+                        <input type="radio" id="gender-male" name="gender" value="male" class="h-4 w-4 text-blue-600">
+                        <span class="ml-2 text-gray-700">Male</span>
+                    </label>
+                    <label class="flex items-center">
+                        <input type="radio" id="gender-female" name="gender" value="female" class="h-4 w-4 text-blue-600">
+                        <span class="ml-2 text-gray-700">Female</span>
+                    </label>
+                </div>
+            </div>
 
-    <label for="gender">Gender:</label><br>
-    <input type="radio" id="gender-male" name="gender" value="male">
-    <label for="gender-male">Male</label><br>
-    <input type="radio" id="gender-female" name="gender-2" value="female">
-    <label for="gender-female">Female</label><br><br>
+            <!-- Hobbies -->
+            <div>
+                <label class="block text-gray-700 font-medium">Hobbies</label>
+                <div class="flex items-center space-x-4 mt-1">
+                    <label class="flex items-center">
+                        <input type="checkbox" id="hobbies-reading" name="hobbies" value="reading" class="h-4 w-4 text-blue-600">
+                        <span class="ml-2 text-gray-700">Reading</span>
+                    </label>
+                    <label class="flex items-center">
+                        <input type="checkbox" id="hobbies-traveling" name="hobbies" value="traveling" class="h-4 w-4 text-blue-600">
+                        <span class="ml-2 text-gray-700">Traveling</span>
+                    </label>
+                </div>
+            </div>
 
-    <label for="hobbies">Hobbies:</label><br>
-    <input type="checkbox" id="hobbies-reading" name="hobbies" value="reading">
-    <label for="hobbies-reading">Reading</label><br>
-    <input type="checkbox" id="hobbies-traveling" name="hobbies" value="traveling">
-    <label for="hobbies-traveling">Traveling</label><br><br>
+            <!-- Country -->
+            <div>
+                <label for="country" class="block text-gray-700 font-medium">Country</label>
+                <select id="country" name="country" 
+                        class="mt-1 w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none">
+                    <option value="usa">USA</option>
+                    <option value="canada">Canada</option>
+                    <option value="uk">UK</option>
+                </select>
+            </div>
 
-    <label for="country">Country:</label>
-    <select id="country" name="country">
-        <option value="usa">USA</option>
-        <option value="canada">Canada</option>
-        <option value="uk">UK</option>
-    </select><br><br>
+            <!-- Message -->
+            <div>
+                <label for="message" class="block text-gray-700 font-medium">Message</label>
+                <textarea id="message" name="message" rows="4" 
+                          class="mt-1 w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none"></textarea>
+            </div>
 
-    <label for="message">Message:</label><br>
-    <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
-
-    <input type="submit" value="Submit">
-</form>
+            <!-- Submit Button -->
+            <div>
+                <button type="submit" 
+                        class="w-full bg-blue-600 text-white p-2 rounded-md hover:bg-blue-700 transition">
+                    Submit
+                </button>
+            </div>
+        </form>
+    </div>
 
 </body>
 </html>
